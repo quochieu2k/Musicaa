@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Musicaa</title>
+  </head>
+
+  <body class="main-container">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- SideBar starts here -->
+        <div id="main-container" class="col-2">
+          <div class="nav-main-box">
+            <div class="logo-container">
+              <h2>Musicaa</h2>
+            </div>
+            <div class="main-links d-flex">
+              <ul class="sidebar-menu" style="padding-left: 0px">
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">
+                    <ion-icon name="compass-outline"></ion-icon>
+                    Explore
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">
+                    <ion-icon name="musical-notes-outline"></ion-icon>
+                    Playlist
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">
+                    <ion-icon name="albums-outline"></ion-icon>
+                    Albums
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">
+                    <ion-icon name="person-outline"></ion-icon>
+                    Artists
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    Liked Songs
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">
+                    <ion-icon name="radio-outline"></ion-icon>
+                    Radio
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="second-links">
+              <p>My Library</p>
+              <ul class="sidebar-menu" style="padding-left: 0px">
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="artist.html">
+                    <ion-icon name="time-outline"></ion-icon>
+                    Play History
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="albumpage.html">
+                    <ion-icon name="download-outline"></ion-icon>
+                    Dowloand Items
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">
+                    <ion-icon name="document-outline"></ion-icon>
+                    Local Files
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- SideBar ends here -->
+
+        <div class="col-10 main-home-container">
+          <!-- Start header -->
+          <div class="col d-flex mt-2 mb-4 justify-content-between align-items-center px-4 py-4">
+            <div class="col-sm-5 ml-5">
+              <div class="search-input">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" placeholder="Search" />
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <nav class="navbar navbar-expand navbar-light">
+                <div class="container-fluid">
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown me-3">
+                        <a
+                          class="nav-link active"
+                          href="#"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <ion-icon
+                            name="notifications-outline"
+                            class="fs-4 text-gray-600"
+                          ></ion-icon>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="dropdown">
+                      <div class="user-menu">
+                        <div class="user-name text-end me-3">
+                          <h6 class="text-user">Nguyen Quoc Hieu</h6>
+                        </div>
+                        <div class="user-img d-flex align-items-center">
+                          <div class="avatar avatar-md">
+                            <img src="./images/1.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <!-- End header -->
+
+          <!-- Explore New -->
+          <div class="row-header d-flex justify-content-between px-4 align-items-center">
+            <h2>Explore New</h2>
+            <a class="more-nav">SEE ALL</a>
+          </div>
+          <div class="container-fluid mb-5">
+            <div class="row flex-nowrap row-overflow">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="card-main">
+                  <div class="card-image-container">
+                    <div class="ratio ratio-1x1">
+                      <img
+                        src="./images/rooms.png"
+                        class="card-img-top py-3 px-3 card-image-rounded"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-tit">Rooms</h5>
+                    <p class="card-text truncate-2-lines">Jason Ross</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="card-main">
+                  <div class="card-image-container">
+                    <div class="ratio ratio-1x1">
+                      <img
+                        src="./images/skin.png"
+                        class="card-img-top py-3 px-3 card-image-rounded"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-tit">Skin</h5>
+                    <p class="card-text truncate-2-lines">Flume</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="card-main">
+                  <div class="card-image-container">
+                    <div class="ratio ratio-1x1">
+                      <img
+                        src="./images/heat.png"
+                        class="card-img-top py-3 px-3 card-image-rounded"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-tit">Heat</h5>
+                    <p class="card-text truncate-2-lines">Refeci & Be Jules</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="card-main">
+                  <div class="card-image-container">
+                    <div class="ratio ratio-1x1">
+                      <img
+                        src="./images/nameoflove.png"
+                        class="card-img-top py-3 px-3 card-image-rounded"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-tit">Name of Love</h5>
+                    <p class="card-text truncate-2-lines">Bebe Rexha ft. Martin Garrix</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Explore New -->
+
+          <div class="row container-fluid">
+            <!-- Popular Songs -->
+            <div class="col-12 col-xl-6 mt-2">
+              <div class="row-header d-flex justify-content-between mb-1 px-1 align-items-center">
+                <h2>Popular Songs</h2>
+              </div>
+              <div class="card play-list" style="border: none">
+                <div class="card-content pb-4"></div>
+              </div>
+            </div>
+
+            <!-- Top Artists and Recently Played -->
+            <div class="col-12 col-xl-6 mt-2">
+              <!-- Top Artists -->
+              <div class="row-header d-flex justify-content-between mb-1 px-1 align-items-center">
+                <h2>Top Artists</h2>
+                <a class="more-nav">SEE ALL</a>
+              </div>
+              <div class="card" style="border: none">
+                <div class="card-content pb-4">
+                  <div class="row flex-nowrap row-overflow">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                      <div class="card-main">
+                        <div class="card-image-container">
+                          <div class="ratio ratio-1x1">
+                            <img
+                              src="./images/jaypark.png"
+                              class="card-img-top py-3 px-3 card-image-rounded card-image-50"
+                              alt="..."
+                            />
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-tit" style="font-size: medium">Jay Park</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                      <div class="card-main">
+                        <div class="card-image-container">
+                          <div class="ratio ratio-1x1">
+                            <img
+                              src="./images/bieber.png"
+                              class="card-img-top py-3 px-3 card-image-rounded card-image-50"
+                              alt="..."
+                            />
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-tit" style="font-size: medium">Justin Bieber</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                      <div class="card-main">
+                        <div class="card-image-container">
+                          <div class="ratio ratio-1x1">
+                            <img
+                              src="./images/taylor.png"
+                              class="card-img-top py-3 px-3 card-image-rounded card-image-50"
+                              alt="..."
+                            />
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-tit" style="font-size: medium">Taylor Swift</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                      <div class="card-main">
+                        <div class="card-image-container">
+                          <div class="ratio ratio-1x1">
+                            <img
+                              src="./images/adele.png"
+                              class="card-img-top py-3 px-3 card-image-rounded card-image-50"
+                              alt="..."
+                            />
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-tit" style="font-size: medium">Adele</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recently Played -->
+              <div class="row-header d-flex justify-content-between mb-1 px-1 align-items-center">
+                <h2>Recently Played</h2>
+              </div>
+              <div class="card" style="border: none">
+                <div class="card-content pb-4">
+                  <div class="recent-message d-flex align-items-center px-4 py-3 card-hover">
+                    <div class="avatar avatar-lg">
+                      <img
+                        src="./images/drive.png"
+                        style="width: 60px; height: 60px; font-size: 1.2rem; border-radius: 15px"
+                      />
+                    </div>
+                    <div class="name ms-4" style="width: 220px">
+                      <h5 class="mb-1 text-black">Drivers License</h5>
+                      <h6 class="text-muted mb-0">Oliva Rodrigo</h6>
+                    </div>
+                    <div class="name" style="margin-left: 60px">
+                      <p class="text-muted mb-0" style="font-size: 0.95rem">4:07</p>
+                    </div>
+                  </div>
+                  <div class="recent-message d-flex align-items-center px-4 py-3 card-hover">
+                    <div class="avatar avatar-lg">
+                      <img
+                        src="./images/narrator.png"
+                        style="width: 60px; height: 60px; font-size: 1.2rem; border-radius: 15px"
+                      />
+                    </div>
+                    <div class="name ms-4" style="width: 220px">
+                      <h5 class="mb-1 text-black">Narrator</h5>
+                      <h6 class="text-muted mb-0">Squid</h6>
+                    </div>
+                    <div class="name" style="margin-left: 60px">
+                      <p class="text-muted mb-0" style="font-size: 0.95rem">8:29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="spacing-div"></div>
+        </div>
+      </div>
+    </div>
+    <div class="music-player">
+      <div class="song-bar">
+        <div class="song-infos">
+          <div class="image-container">
+            <img src="./images/skin.png" alt="" />
+          </div>
+          <div class="song-description">
+            <p class="title">Skin</p>
+            <p class="artist">Flume</p>
+          </div>
+        </div>
+        <div class="icons">
+          <ion-icon name="heart-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="progress-controller">
+        <div class="control-buttons mt-5 pb-2">
+          <div>
+            <ion-icon
+              class="play-shuffle"
+              name="shuffle-outline"
+              style="width: 25px; height: 25px; padding-right: 50px"
+            ></ion-icon>
+          </div>
+          <div>
+            <ion-icon
+              class="play-back"
+              name="play-skip-back-circle-outline"
+              style="width: 35px; height: 35px"
+            ></ion-icon>
+          </div>
+          <div class="player-inner">
+            <ion-icon name="pause-circle-outline" class="play-pause"></ion-icon>
+            <ion-icon name="play-circle-outline" class="play-play"> </ion-icon>
+          </div>
+          <div>
+            <ion-icon
+              class="play-forward"
+              name="play-skip-forward-circle-outline"
+              style="width: 35px; height: 35px"
+            ></ion-icon>
+          </div>
+          <div>
+            <ion-icon
+              class="play-repeat"
+              name="repeat-outline"
+              style="width: 25px; height: 25px; padding-left: 50px"
+            ></ion-icon>
+          </div>
+        </div>
+        <div class="progress-container mb-5 pt-0">
+          <!-- <div class="remaining">2:58</div> -->
+          <audio src="" id="audio"></audio>
+          <input
+            type="range"
+            name="range"
+            id="range"
+            class="range"
+            value="0"
+            step="1"
+            min="0"
+            max="100"
+          />
+          <!-- <div class="duration">0:39</div> -->
+        </div>
+      </div>
+      <div class="other-features">
+        <div class="volume-bar">
+          <ion-icon name="volume-medium-outline"></ion-icon>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

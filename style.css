@@ -1,0 +1,935 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,900;1,900&family=Roboto+Mono:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap");
+
+html,
+body {
+  /* use this bg-lin-gradient, if you dont' mind ofc */
+  /* background: linear-gradient(rgba(171, 44, 28, 1), rgba(18, 18, 18, 1) 50%); */
+  line-height: 1.6;
+  color: #25396f;
+
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+.card p {
+  color: #b3b3b3;
+  font-weight: 400;
+}
+.text-blue {
+  color: #25396f;
+}
+.Albumcard {
+  background-color: #3a2626 !important;
+}
+.nextArrow,
+.PreviousArrow {
+  position: relative;
+}
+
+.PreviousArrow img:hover {
+  opacity: 0.3;
+}
+
+.nextArrow img:hover {
+  opacity: 0.3;
+}
+
+.nextArrow img::after {
+  content: "";
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  z-index: -1;
+  position: absolute;
+}
+.PreviousArrow img::after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.603);
+  height: 30px;
+  width: 30px;
+  z-index: -1;
+  position: absolute;
+}
+
+.ProfileBtn {
+  padding-left: 3% !important;
+  padding-top: 0% !important;
+  color: white !important;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 1px solid gray;
+  height: 40px;
+  width: 170px;
+  background-color: #120202 !important;
+}
+
+.main-Body {
+  background: rgb(18, 18, 18);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(18, 18, 18, 1) 47%,
+    rgba(119, 42, 96, 1) 79%,
+    rgba(119, 42, 96, 1) 85%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(18, 18, 18, 1) 47%,
+    rgba(119, 42, 96, 1) 79%,
+    rgba(119, 42, 96, 1) 85%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(18, 18, 18, 1) 47%,
+    rgba(119, 42, 96, 1) 79%,
+    rgba(119, 42, 96, 1) 85%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#772a60",GradientType=1);
+}
+
+td,
+tr {
+  color: #25396f;
+  font-size: 14px;
+  border-color: #171717;
+}
+
+.artist-link,
+.song-duration {
+  font-size: 10px;
+}
+
+.Albumcard p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.truncate-2-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.card h2 {
+  font-weight: 400;
+}
+.card-image-rounded {
+  border-radius: 15%;
+}
+.card-image-50 {
+  border-radius: 50%;
+}
+.card-image-container {
+  position: relative;
+}
+
+.card-img-top {
+  z-index: 1;
+}
+
+.play-btn {
+  background-color: black;
+  height: 40px;
+  width: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  right: 10%;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out 0.4s, opacity 0.5s ease-in-out 0.5s;
+}
+
+.play-btn:hover {
+  border: none;
+  opacity: 1;
+}
+
+.play-btn:not(:hover) {
+  background: rgb(11, 221, 29);
+  opacity: 0;
+}
+
+.play-btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 2px;
+  margin: auto;
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent white;
+}
+.active {
+  color: #ffb86c;
+}
+.card:hover {
+  /* background-color: rgba(219, 87, 160, 0.062); */
+  cursor: pointer;
+}
+.card-hover:hover {
+  background-color: rgba(241, 161, 205, 0.096);
+  border-radius: 10px;
+}
+.card-hover.active {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(223, 51, 146, 0.062);
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.card-hover.active h5,
+.card-hover.active h6,
+.card-hover.active p {
+  color: rgb(223, 51, 145) !important;
+}
+.card-hover:active {
+  opacity: 0.8;
+}
+.card:hover .play-btn {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.row-overflow {
+  overflow: hidden;
+}
+
+.card-img-top {
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-title-music {
+  font-style: bold;
+}
+
+.more-nav {
+  color: #6c757d;
+  font-size: small;
+  text-decoration: none;
+}
+
+.more-nav:hover {
+  cursor: pointer;
+  color: #25396f;
+}
+
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
+.music-player {
+  background-color: #131116;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 8rem;
+  padding: 1em;
+  color: #ddd;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0.95;
+}
+
+.song-bar {
+  position: absolute;
+  left: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: 25%;
+}
+
+.song-infos {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.image-container {
+  flex-shrink: 0;
+  width: 4.5em;
+  height: 4.5em;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25%;
+}
+
+.song-description p {
+  margin: 0.2em;
+}
+
+.title,
+.artist {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.title {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.artist {
+  color: #999;
+  font-size: 15px;
+}
+
+.icons {
+  display: flex;
+  gap: 1em;
+  margin-left: 45px;
+}
+.icons ion-icon {
+  width: 28px;
+  height: 28px;
+}
+.progress-controller {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  color: #999;
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.control-buttons a {
+  color: #999;
+}
+.play-play {
+  display: inline-block;
+  color: #999;
+  font-size: 3.5em;
+  border-radius: 50%;
+}
+.control-buttons .play-pause {
+  display: none;
+}
+.control-buttons.playing .play-pause {
+  display: inline-block;
+  color: #999;
+  font-size: 3.5em;
+  border-radius: 50%;
+}
+
+.control-buttons.playing .play-play {
+  display: none;
+}
+
+.progress-container {
+  width: 100%;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: #999;
+}
+
+.progress {
+  position: relative;
+  height: 100%;
+  width: 0;
+  background-color: #ddd;
+}
+
+.other-features {
+  position: absolute;
+  right: 2em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.volume-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.volume-bar ion-icon {
+  width: 25px;
+  height: 25px;
+}
+.volume-bar .progress-bar {
+  width: 6em;
+}
+
+.music-player {
+  color: #999;
+}
+
+td,
+tr {
+  color: black;
+  font-size: 14px;
+  border-color: #171717;
+}
+
+.artist-link,
+.song-duration {
+  font-size: 10px;
+}
+
+.progress-bar:hover .progress {
+  background-color: #2d5;
+}
+
+.title:hover,
+.artist:hover {
+  color: rgb(223, 51, 145);
+  cursor: pointer;
+}
+
+i:hover {
+  color: #ddd !important;
+}
+
+.play-pause:hover {
+  transform: scale(1.1);
+  color: rgb(223, 51, 145);
+}
+
+/* .progress-bar:hover .progress::after{
+    content: "";
+    position: absolute;
+
+    width: 8em;
+    height: 8em;
+    right: 0px;
+    border-radius: 50%;
+    background-color: #ddd;
+    transform: translate(50%, calc(2px - 50%));
+}
+ */
+/* .volume-bar .progress-bar:hover .progress::after{
+    --size: .8em;
+} */
+
+@media (max-width: 50em) {
+  .song-bar,
+  .other-features {
+    visibility: hidden;
+  }
+}
+
+/* Don css starts here */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,900;1,900&family=Roboto+Mono:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap");
+:root {
+  --main-font: "Montserrat", sans-serif;
+  --spotify-green: #1db954;
+  --spotify-grey: #8a8a8a;
+  --spotify-white: #eaeaea;
+  --spotify-dark-bg: #000000;
+  --spotify-darker-bg: #121212;
+}
+.dropdown-menu a {
+  color: #333333;
+}
+.dropdown-menu a:hover {
+  text-decoration: none;
+  transition: color 0.5s;
+  color: rgb(255, 255, 255);
+}
+
+#main-container {
+  background-color: #fff;
+  font-family: var(--main-font);
+  border-right: #b3b3b3 1px solid;
+  /* height: 140vh; */
+}
+
+.nav-main-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-links {
+  flex-direction: column;
+}
+/* #main-container a {
+  text-decoration: none;
+  color: #25396f;
+  padding-bottom: 10px;
+  font-weight: 600;
+} */
+/* #main-container a:hover {
+  text-decoration: none;
+  color: rgb(223, 51, 145);
+  border-radius: 0.5rem;
+  background-color: rgba(223, 51, 146, 0.158);
+  transition: all 0.5s;
+} */
+.list-of-songs a {
+  /* only for bottom list of songs on side bar */
+  font-size: 0.8rem;
+}
+.main-links a,
+.second-links a,
+.list-of-songs a,
+.install-app {
+  transition: color 0.4s;
+}
+.likedPick {
+  /* this is only for (img liked) songs */
+  width: 27px;
+  margin-right: 1rem;
+}
+
+.main-links i,
+.second-links i {
+  /* for all icons */
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.list-of-songs {
+  overflow-y: auto;
+}
+
+.second-links {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  padding-bottom: 10px;
+}
+.second-links p {
+  color: #25396f;
+  padding-left: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Don's sideBar css ends here */
+
+/* Don's Jumbotron starts here for ARtists page */
+
+.jumbo-img {
+  opacity: 0.5;
+  max-height: 60vh;
+  object-fit: cover;
+}
+.btn {
+  background-color: #000000;
+  color: rgb(255, 255, 255) !important;
+}
+#first-button:hover {
+  color: white;
+}
+.btn-group {
+  position: relative;
+  left: 50rem;
+}
+
+.verified-artist-container {
+  position: absolute;
+  top: 28%;
+  left: 20%;
+  z-index: 1;
+  font-size: smaller;
+}
+.verified-artist-container i {
+  color: rgb(101, 101, 233);
+}
+.jumbo-title {
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+  font-size: 58px;
+  top: 31%;
+  left: 19%;
+  color: var(--spotify-white);
+}
+.jumbo-paragraph {
+  position: absolute;
+  top: 46%;
+  left: 18%;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Don;s jumbo-style ends here */
+/* Sumroooz css starts here */
+
+/* .profil-btn {
+  left: 120vh;
+  border: 1px solid rgba(128, 128, 128, 0);
+  border-radius: 55px;
+  padding: 0px 2px 0 2px;
+  background-color: black;
+  padding-left: 0px;
+  z-index: 1;
+  padding: 0px;
+} */
+/* End of Sumrooz's css */
+.table-image {
+  height: 45px;
+  object-fit: cover;
+  opacity: 1;
+}
+
+th,
+td {
+  color: white;
+  border: none;
+}
+
+.pause-icon {
+  font-size: 3ch;
+}
+
+.pause-btn {
+  background-color: #1db954;
+  border-radius: 50%;
+  color: white;
+  width: 50px;
+  height: 50px;
+}
+
+.follow-btn {
+  border: 1px solid #999;
+  border-radius: 8%;
+}
+
+.img-artist-pick {
+  height: 75px;
+}
+
+.img-artist-small {
+  height: 20px;
+  border-radius: 50%;
+}
+
+.muted-text {
+  color: #999;
+}
+.played-track {
+  color: #1db954;
+}
+.song-name-table:hover {
+  color: #1db954;
+}
+
+.dots {
+  font-size: 3ch;
+}
+.bold-text {
+  font-weight: bold;
+  letter-spacing: 0.1ch;
+}
+
+.jmb-position {
+  margin: 0;
+}
+
+#spacing-div {
+  height: 7rem;
+}
+
+/* ARTIST PAGE TABLE CSS */
+
+body > div.container-fluid > div > div.col > div.col.mt-2 > div > table > thead > tr {
+  border-bottom: 1px solid rgb(82, 75, 75);
+}
+
+body > div.container-fluid > div > div.col > div.col.mt-2 > div > table > thead > tr {
+  height: 40px;
+}
+
+body
+  > div.container-fluid
+  > div
+  > div.col
+  > div.col.mt-2
+  > div
+  > table
+  > tbody
+  > tr
+  > td
+  > p:nth-child(2) {
+  font-size: 10px;
+  color: #999;
+}
+
+body
+  > div.container-fluid
+  > div
+  > div.col
+  > div.col.mt-2
+  > div
+  > table
+  > tbody
+  > tr
+  > td:nth-child(3) {
+  font-size: 10px;
+  color: #999;
+}
+
+body > div.container-fluid > div > div.col > div.col.mt-2 > div > table > thead > tr > th {
+  color: #999;
+  font-size: 10px;
+}
+
+body
+  > div.container-fluid
+  > div
+  > div.col
+  > div.col.mt-2
+  > div
+  > table
+  > tbody
+  > tr
+  > td:nth-child(1) {
+  color: #999;
+}
+
+/* functionalplayer css */
+
+.music-player > .progress-controller > .control-buttons > .action-btn {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#prev > i {
+  color: #999;
+}
+
+#next > i {
+  color: #999;
+}
+
+a.album-title {
+  text-decoration: none;
+  color: gray;
+}
+
+a.album-title:visited {
+  text-decoration: none;
+}
+
+a.album-title:hover {
+  text-decoration: underline;
+  color: #f9f8ff;
+}
+
+a.album-title:active {
+  text-decoration: underline;
+}
+
+a.artist-name {
+  text-decoration: none;
+  color: #1db954;
+  font-weight: 600;
+}
+
+a.artist-name:visited {
+  text-decoration: none;
+}
+
+a.artist-name:hover {
+  text-decoration: underline;
+  color: #1db954;
+}
+
+a.artist-name:active {
+  text-decoration: underline;
+}
+
+/* CSS rieng */
+.logo-container h2 {
+  padding-top: 45px;
+  padding-left: 15px;
+  padding-bottom: 50px;
+  color: rgb(123, 30, 199);
+  font-weight: 600;
+}
+.sidebar-menu {
+  list-style-type: none;
+}
+.sidebar-item {
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 1.5rem;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #25396f;
+  font-weight: 600;
+}
+.sidebar-link i {
+  width: 1rem;
+  margin-right: 3rem;
+}
+.sidebar-link ion-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.sidebar-item:hover {
+  border-radius: 0.5rem;
+  background-color: rgba(223, 51, 146, 0.062);
+  transition: all 0.5s;
+}
+.sidebar-item:hover a {
+  color: rgb(223, 51, 145);
+}
+/* Search */
+* {
+  box-sizing: border-box;
+}
+input,
+button,
+textarea {
+  border: 0;
+  outline: none;
+}
+/* Main code */
+.search-input {
+  border-radius: 8px;
+  border: 1px solid #a7a8b0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: #a7a8b0;
+  opacity: 0.8;
+}
+.search-input input {
+  padding: 0 15px;
+  outline: none;
+  border: none;
+  line-height: normal;
+  width: 100%;
+}
+.search-input ion-icon {
+  width: 20px;
+  height: 20px;
+}
+.navbar .user-menu img {
+  width: 50px;
+  height: 50px;
+}
+.avatar {
+  display: inline-flex;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+.avatar .avatar-md img {
+  width: 32px;
+  height: 32px;
+  font-size: 0.8rem;
+}
+.avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.user-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+}
+.text-user {
+  color: #25396f;
+  font-weight: 600;
+}
+.card-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  /* border: 1px solid rgba(0, 0, 0, 0.125); */
+  border-radius: 1rem;
+}
+.card-main:hover {
+  cursor: pointer;
+}
+.card-body {
+  padding: 0rem 1rem !important;
+  text-align: center;
+}
+h5.card-tit {
+  font-weight: bolder;
+}
+.card-text:last-child {
+  margin-bottom: 15px;
+}
+h2 {
+  font-weight: 600;
+}
+.range {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 40%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  margin-bottom: 20px;
+}
+.range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  background-color: #eeee;
+  border-radius: 8px;
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: rgb(223, 51, 145);
+  width: 12px;
+  height: 12px;
+  border-radius: 100rem;
+  margin-top: -6px;
+  box-shadow: 0 0 0 3px white, 0 0 0 6px rgba(100, 100, 111, 0.05);
+}
+input {
+  line-height: normal;
+}
+.logo-container h2 {
+  cursor: pointer;
+}
