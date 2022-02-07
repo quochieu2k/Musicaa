@@ -445,13 +445,6 @@ i:hover {
     --size: .8em;
 } */
 
-@media (max-width: 50em) {
-  .song-bar,
-  .other-features {
-    visibility: hidden;
-  }
-}
-
 /* Don css starts here */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,900;1,900&family=Roboto+Mono:ital,wght@1,700&display=swap");
@@ -932,4 +925,69 @@ input {
 }
 .logo-container h2 {
   cursor: pointer;
+}
+.name-song {
+  width: 220px;
+}
+
+/* Responsive */
+/* Iphone */
+@media screen and (max-width: 480px) {
+  #main-container {
+    border-right: none;
+    display: none !important;
+  }
+  .main-links.d-flex,
+  .second-links,
+  .search-input,
+  .navbar-nav,
+  .row-header.d-flex.justify-content-between.px-4.align-items-center,
+  .container-fluid.mb-5,
+  .action,
+  .col-12.col-xl-6.mt-2.top-artists,
+  .song-bar,
+  .other-features {
+    display: none !important;
+  }
+  nav.navbar.navbar-expand.navbar-light {
+    /* padding-left: 65px; */
+    padding-right: 50px;
+  }
+  .container-fluid {
+    padding-right: 0;
+  }
+  .col-10.main-home-container {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+/* Table */
+@media screen and (max-width: 1023px) {
+  #main-container {
+    border: none;
+    display: none !important;
+  }
+  .col-10 {
+    width: auto;
+  }
+  .container-fluid.mb-5 {
+    margin-bottom: 0px !important;
+  }
+  .time-recently {
+    margin-left: 160px !important;
+  }
+  .control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .icons {
+    display: none;
+  }
 }

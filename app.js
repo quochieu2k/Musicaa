@@ -108,14 +108,14 @@ const app = {
                   src="${song.image}"
                   style="width: 60px; height: 60px; font-size: 1.2rem; border-radius: 15px"/>
               </div>
-              <div class="name ms-4" style="width: 220px">
+              <div class="name ms-4 name-song" >
                 <h5 class="mb-1 text-black">${song.name}</h5>
                 <h6 class="text-muted mb-0">${song.singer}</h6>
               </div>
               <div class="name" style="margin-left: auto">
                 <p class="text-muted mb-0" style="font-size: 0.95rem">${song.time}</p>
               </div>
-              <div class="name" style="margin-left: auto">
+              <div class="name action" style="margin-left: auto">
                 <p class="text-muted mb-0">
                   <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                 </p>
